@@ -1,6 +1,6 @@
 
 
-public class cell
+public class Cell
 {
     private bool isAlive;
     public bool IsAlive
@@ -8,7 +8,7 @@ public class cell
         get {return this.isAlive;} set {this.isAlive = value;}
     }
 
-    public cell(bool lifeStatus)
+    public Cell(bool lifeStatus)
     {
         this.isAlive = lifeStatus;
     }

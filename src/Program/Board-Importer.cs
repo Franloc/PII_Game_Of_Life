@@ -1,15 +1,23 @@
 using System;
 using System.Reflection;
+using System.Text;
+using System.IO;
 
 namespace Ucu.Poo.GameOfLife
 {
     class Board_Importer
     {
-        string url = assets/board.txt;
-        string content = File.ReadAllText(url);
-        string[] contentLines = content.Split('\n');
-        bool[,] board = new bool[contentLines.Length, contentLines[0].Length];
-        void Cargar_archivo()
+    string url;
+    string content;
+    string[] contentLines;
+    bool[,] board;
+    public Board_Importer()
+    {
+        url = "assets/board.txt";
+        content = File.ReadAllText(url);
+        contentLines = content.Split('\n');
+        board = new bool[contentLines.Length, contentLines[0].Length];
+    }        void Cargar_archivo()
         {
             for (int  y=0; y<contentLines.Length;y++)
             {

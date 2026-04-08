@@ -1,6 +1,6 @@
 class MotorDeReglas
 {
-    public void Generacion(GameBoard boardObj)
+    public void Generacion(Board boardObj) // Nombre de la clase Board
     {
         bool[,] gameBoard = boardObj.getBoard();
         int boardWidth = gameBoard.GetLength(0);

@@ -7,7 +7,12 @@ namespace Ucu.Poo.GameOfLife
 {
     class Board_Importer
     {
-        string url;
+        private string url;
+        public string Url
+        {
+            get { return this.url;} set { this.url = value;}
+        }
+
         string content;
         string[] contentLines;
         bool[,] board;
@@ -30,8 +35,8 @@ namespace Ucu.Poo.GameOfLife
 
         public Board_Importer()
         {
-            url = "assets/board.txt";
-            content = File.ReadAllText(url);
+            Url = "assets/board.txt";
+            content = File.ReadAllText(Url);
             contentLines = content.Split('\n');
             board = new bool[contentLines.Length, contentLines[0].Length];
         }

@@ -49,5 +49,11 @@ namespace Ucu.Poo.GameOfLife
             Thread.Sleep(300);
             }
         }
+        public Board_Printer(bool[,] b,int width, int height)
+        {
+            this.B=b;
+            this.Width=width;
+            this.Height=height;
+        }
     }
 }

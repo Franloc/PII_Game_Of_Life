@@ -7,16 +7,18 @@ namespace Ucu.Poo.GameOfLife
 {
     class Board_Importer
     {
+        //Atributos
         private string url;
         public string Url
         {
             get { return this.url;} set { this.url = value;}
         }
-
+        //IMPORTANTE: Encapsular atributos
         string content;
         string[] contentLines;
         bool[,] board;
 
+        //Carga el archivo del tablero
         public bool[,] Cargar_archivo()
         {
             for (int  y=0; y<contentLines.Length;y++)
@@ -32,7 +34,7 @@ namespace Ucu.Poo.GameOfLife
             return board;
         }
 
-
+        //Constructor
         public Board_Importer()
         {
             Url = "assets/board.txt";

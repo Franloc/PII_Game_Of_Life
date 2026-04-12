@@ -17,7 +17,8 @@ namespace Ucu.Poo.GameOfLife
         content = File.ReadAllText(url);
         contentLines = content.Split('\n');
         board = new bool[contentLines.Length, contentLines[0].Length];
-    }        void Cargar_archivo()
+    }
+    void Cargar_archivo()
         {
             for (int  y=0; y<contentLines.Length;y++)
             {

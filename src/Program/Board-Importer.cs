@@ -31,7 +31,7 @@ namespace Ucu.Poo.GameOfLife
 
 
         //Metodos
-        
+
         //Carga el archivo del tablero
         public bool[,] Cargar_archivo()
         {

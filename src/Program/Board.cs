@@ -4,25 +4,45 @@ using System.Threading;
 
 public class Board
 {
-    //Atributos (Lista de celulas)
-    private List<Cell> cells = new List<Cell>();
+    //Atributos
+    private List<Cell> cells;
     public List<Cell> Cells
     {
         get { return this.cells;} set { this.cells = value;}
     }
-
-    //Constructor //Creo que esto esta mal
-    public Board(bool[,] bools)
+    private bool[,] gameBoard;
+    public bool[,] GameBoard
     {
-        int height = bools.Length;
-        int width = bools.Length;
+        get {return this.gameBoard;} set {this.gameBoard = value;}
+    }
+
+    //Dimensiones del board
+    private int bWitdh;
+    public int BWidth
+    {
+        get {return this.BWidth;} set {this.bWitdh = value;}
+    }
+    private int bHeigth;
+    public int BHeigth
+    {
+        get {return this.bHeigth;} set {this.bHeigth = value;}
+    }
+
+
+    //Constructor
+    public Board(bool[,] importedBoard)
+    {
+        gameBoard = importedBoard;
+        BWidth = importedBoard.GetLength(0);
+        BHeigth = importedBoard.GetLength(1);
+
 
         //Anade una celula 
-        for (int y = 0; y<height;y++)
+        for (int y = 0; y<BHeigth;y++)
         {
-            for (int x = 0; x<width; x++)
+            for (int x = 0; x<BWidth; x++)
             {
-                if(bools[x,y])
+                if(importedBoard[x,y])
                 {
                     this.cells.Add(new Cell(true));
                 }

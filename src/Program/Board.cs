@@ -37,7 +37,8 @@ public class Board
         BHeigth = importedBoard.GetLength(1);
 
 
-        //Anade una celula 
+        //Anade una celula //No estoy seguro si es necesario tener una lista de celulas, no me acuerdo que
+        //habia que hacer con las celulas.
         for (int y = 0; y<BHeigth;y++)
         {
             for (int x = 0; x<BWidth; x++)

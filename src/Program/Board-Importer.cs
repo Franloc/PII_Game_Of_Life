@@ -13,11 +13,25 @@ namespace Ucu.Poo.GameOfLife
         {
             get { return this.url;} set { this.url = value;}
         }
-        //IMPORTANTE: Encapsular atributos
-        string content;
-        string[] contentLines;
-        bool[,] board;
+        private string content;
+        public string Content
+        {
+            get {return this.content;} set {this.content = value;}
+        }
+        private string[] contentLines;
+        public string[] ContentLines
+        {
+            get {return this.ContentLines;} set {this.contentLines = value;}
+        }
+        private bool[,] board;
+        public bool[,] Board
+        {
+            get {return this.board;} set {this.board = value;}
+        }
 
+
+        //Metodos
+        
         //Carga el archivo del tablero
         public bool[,] Cargar_archivo()
         {

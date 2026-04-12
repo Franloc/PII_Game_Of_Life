@@ -1,11 +1,8 @@
-using System;
-using System.Reflection;
-using System.Text;
 using System.IO;
 
 namespace Ucu.Poo.GameOfLife
 {
-    class Board_Importer
+    public class Board_Importer
     {
         //Atributos
         private string url;

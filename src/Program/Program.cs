@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Ucu.Poo.GameOfLife
 {
@@ -13,9 +13,6 @@ namespace Ucu.Poo.GameOfLife
             
             //Crea el tablero
             Board tablero = new Board(importador.Cargar_archivo());
-
-
-
         }
     }
 }

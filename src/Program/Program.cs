@@ -30,7 +30,6 @@ namespace Ucu.Poo.GameOfLife
             //nfsjnwkj
             while (true)
             {
-                printer.Print();
                 motor.Generacion(tablero);
             }
         }

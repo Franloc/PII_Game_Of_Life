@@ -2,13 +2,17 @@ namespace Ucu.Poo.GameOfLife
 {
     public class Board
     {
-        //Atributos
-        private bool[,] gameBoard;
+        // Esta clase se encarga de almacenar la informacion del tablero en el que se lleva a cabo la simulacion
+
+
+        // Atributos
+        private bool[,] gameBoard; // Representa el tablero
         public bool[,] GameBoard
         {
             get {return this.gameBoard;} set {this.gameBoard = value;}
         }
-        //Dimensiones del board
+
+        // Dimensiones del board
         private int bWidth;
         public int BWidth
         {
@@ -20,7 +24,7 @@ namespace Ucu.Poo.GameOfLife
             get {return this.bHeight;} set {this.bHeight = value;}
         }
         
-        //Constructor
+        // Constructor
         public Board(bool[,] importedBoard)
         {
             gameBoard = importedBoard;

@@ -6,12 +6,16 @@ namespace Ucu.Poo.GameOfLife
 {
     public class Board_Printer
     {
-        private bool[,] b; //variable que representa el tablero
+        // Esta clase se encarga de imprimir en pantalla el tablero
+
+
+        // Atributos
+        private bool[,] b; // variable que representa el tablero
         public bool [,] B
         {
             get {return this.b;} set {this.b = value;}
         }
-        private int width; //variabe que representa el ancho del tablero
+        private int width; // variabe que representa el ancho del tablero
         public int Width
         {
             get {return this.width;} set {this.width = value;}
@@ -21,6 +25,10 @@ namespace Ucu.Poo.GameOfLife
         {
             get {return this.height;} set {this.height=value;}
         }
+
+        // Metodos
+
+        // Mostrar tablero
         public void Print()
         {
             Console.Clear();
@@ -41,9 +49,12 @@ namespace Ucu.Poo.GameOfLife
                 s.Append("\n");
             }
             Console.WriteLine(s.ToString());
+
             //Delay
-            Thread.Sleep(300);
+            Thread.Sleep(500);
         }
+
+        //Constructor
         public Board_Printer(bool[,] b,int width, int height)
         {
             this.B=b;

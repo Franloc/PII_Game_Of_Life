@@ -5,9 +5,11 @@ namespace Ucu.Poo.GameOfLife
 {
     class Program
     {
+        // Clase Program donde se corre el juego
         
         static void Main(string[] args)
         {
+            //Inicio
             Console.Clear();
             Console.WriteLine("Inicio del programa");
 
@@ -24,14 +26,16 @@ namespace Ucu.Poo.GameOfLife
             //Crea el motor
             MotorDeReglas motor = new MotorDeReglas();
 
+
+            //Delay antes de empezar a simular
+            Thread.Sleep(2000);
             
             //Loop de generacion
             while (true)
             {
-                Console.Clear();
-                printer.Print();
-                tablero.GameBoard = motor.Generacion(tablero);
-                printer.B = tablero.GameBoard;
+                printer.Print(); //Imprime el tablero
+                tablero.GameBoard = motor.Generacion(tablero); //Actualiza el board a la nueva generacion
+                printer.B = tablero.GameBoard; //Actualiza el board que debe imprimir el printer
             }
         }
     }

@@ -5,7 +5,7 @@ namespace Ucu.Poo.GameOfLife
     public class Board
     {
         //Atributos
-        private List<Cell> cells;
+        private List<Cell> cells = new List<Cell>();
         public List<Cell> Cells
         {
             get { return this.cells;} set { this.cells = value;}

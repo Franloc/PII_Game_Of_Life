@@ -22,10 +22,10 @@ namespace Ucu.Poo.GameOfLife
         {
             get {return this.bWidth;} set {this.bWidth = value;}
         }
-        private int bHeigth;
-        public int BHeigth
+        private int bHeight;
+        public int BHeight
         {
-            get {return this.bHeigth;} set {this.bHeigth = value;}
+            get {return this.bHeight;} set {this.bHeight = value;}
         }
 
 
@@ -34,12 +34,12 @@ namespace Ucu.Poo.GameOfLife
         {
             gameBoard = importedBoard;
             BWidth = importedBoard.GetLength(0);
-            BHeigth = importedBoard.GetLength(1);
+            BHeight = importedBoard.GetLength(1);
 
 
             //Anade una celula //No estoy seguro si es necesario tener una lista de celulas, no me acuerdo que
             //habia que hacer con las celulas.
-            for (int y = 0; y<BHeigth;y++)
+            for (int y = 0; y<BHeight;y++)
             {
                 for (int x = 0; x<BWidth; x++)
                 {

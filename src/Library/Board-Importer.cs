@@ -18,7 +18,7 @@ namespace Ucu.Poo.GameOfLife
         private string[] contentLines;
         public string[] ContentLines
         {
-            get {return this.ContentLines;} set {this.contentLines = value;}
+            get {return this.contentLines;} set {this.contentLines = value;}
         }
         private bool[,] board;
         public bool[,] Board

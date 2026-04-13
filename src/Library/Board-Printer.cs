@@ -4,7 +4,7 @@ using System.Threading;
 
 namespace Ucu.Poo.GameOfLife
 {
-    class Board_Printer
+    public class Board_Printer
     {
         private bool[,] b; //variable que representa el tablero
         public bool [,] B
@@ -21,31 +21,26 @@ namespace Ucu.Poo.GameOfLife
         {
             get {return this.height;} set {this.height=value;}
         }
-        void Print()
+        public void Print()
         {
-            while (true)
+            Console.Clear();
+            StringBuilder s = new StringBuilder();
+            for (int y = 0; y<height;y++)
             {
-                Console.Clear();
-                StringBuilder s = new StringBuilder();
-                for (int y = 0; y<height;y++)
+                for (int x = 0; x<width; x++)
                 {
-                    for (int x = 0; x<width; x++)
+                    if(b[x,y])
                     {
-                        if(b[x,y])
-                        {
-                            s.Append("|X|");
-                        }
-                        else
-                        {
-                            s.Append("___");
-                        }
+                        s.Append("|X|");
+                    }
+                    else
+                    {
+                        s.Append("___");
                     }
                 }
+            }
             s.Append("\n");
             Console.WriteLine(s.ToString());
-            MotorDeReglas.Generacion(gameBoard);
-            Thread.Sleep(300);
-            }
         }
         public Board_Printer(bool[,] b,int width, int height)
         {

@@ -29,19 +29,18 @@ namespace Ucu.Poo.GameOfLife
             {
                 for (int x = 0; x<width; x++)
                 {
-                    if(b[x,y])
+                    if(b[y,x])
                     {
                         s.Append("|X|");
                     }
                     else
                     {
-                        s.Append("___");
+                        s.Append("---");
                     }
                 }
+                s.Append("\n");
             }
-            s.Append("\n");
             Console.WriteLine(s.ToString());
-
             //Delay
             Thread.Sleep(300);
         }

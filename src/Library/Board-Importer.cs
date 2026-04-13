@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 
 namespace Ucu.Poo.GameOfLife
@@ -25,10 +26,7 @@ namespace Ucu.Poo.GameOfLife
         {
             get {return this.board;} set {this.board = value;}
         }
-
-
         //Metodos
-
         //Carga el archivo del tablero
         public bool[,] Cargar_archivo()
         {
@@ -38,13 +36,13 @@ namespace Ucu.Poo.GameOfLife
                 {
                 if(contentLines[y][x]=='1')
                     {
-                    board[x,y]=true;
+                    board[y,x]=true;
                     }
                 }
             }
+            Console.WriteLine(board);
             return board;
         }
-
         //Constructor
         public Board_Importer()
         {

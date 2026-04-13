@@ -24,9 +24,7 @@ namespace Ucu.Poo.GameOfLife
             //Crea el motor
             MotorDeReglas motor = new MotorDeReglas();
 
-            //Delay Test para var como se genera inicialmente
-            Thread.Sleep(500);
-
+            
             //Loop de generacion
             while (true)
             {

@@ -35,7 +35,7 @@ namespace Ucu.Poo.GameOfLife
             {
                 printer.Print(); //Imprime el tablero
                 tablero.GameBoard = motor.Generacion(tablero); //Actualiza el board a la nueva generacion
-                printer.B = tablero.GameBoard; //Actualiza el board
+                printer.B = tablero.GameBoard; //Actualiza el board que debe imprimir el printer
             }
         }
     }

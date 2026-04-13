@@ -3,6 +3,13 @@ namespace Ucu.Poo.GameOfLife
 {
     public class MotorDeReglas
     {
+        //Atributos
+        private Board_Printer printer;
+        public Board_Printer Printer
+        { 
+            get {return this.printer;} set {this.printer = value;}
+        }
+        
         public void Generacion(Board boardObj) // Nombre de la clase Board
         {
             bool[,] gameBoard = boardObj.GameBoard;

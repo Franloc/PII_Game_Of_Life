@@ -13,7 +13,7 @@ namespace Ucu.Poo.GameOfLife
         private bool[,] gameBoard;
         public bool[,] GameBoard
         {
-            get {return this.gameBoard;}
+            get {return this.gameBoard;} set {this.gameBoard = value;}
         }
 
         //Dimensiones del board

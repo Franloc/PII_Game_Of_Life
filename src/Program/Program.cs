@@ -7,6 +7,16 @@ namespace Ucu.Poo.GameOfLife
 {
     class Program
     {
+        public void Juego(Board board, Board_Printer printer, MotorDeReglas motor)
+        {
+            while (true)
+            {
+                printer.Print();
+                Thread.Sleep(300);
+                motor.Generacion(board);
+            }
+        }
+        
         static void Main(string[] args)
         {
             Console.WriteLine("Inicio del programa");
@@ -27,15 +37,6 @@ namespace Ucu.Poo.GameOfLife
             MotorDeReglas motor = new MotorDeReglas();
 
             Juego(tablero, printer, motor);
-        }
-        public void Juego(Board board, Board_Printer printer, MotorDeReglas motor)
-        {
-            while (true)
-            {
-                printer.Print();
-                Thread.Sleep(300);
-                motor.Generacion(board);
-            }
         }
     }
 }

@@ -14,11 +14,8 @@ namespace Ucu.Poo.GameOfLife
             //Crear el board importer
             Board_Importer importador = new Board_Importer();
             
-            //Crea el tablero inicial
-            bool[,] tablero_inicial = importador.Cargar_archivo();
-            
             // Crea el tablero a modificar
-            Board tablero = new Board(tablero_inicial);
+            Board tablero = new Board(importador.Cargar_archivo());
             
             //Crea el printer
             Board_Printer printer = new Board_Printer(tablero_inicial,tablero.BWidth,tablero.BHeight);

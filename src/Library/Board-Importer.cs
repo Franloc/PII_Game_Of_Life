@@ -5,7 +5,7 @@ namespace Ucu.Poo.GameOfLife
 {
     public class Board_Importer
     {
-        //Esta clase se encarga de importar el boardo inicial del cual parte la simulacion
+        //Esta clase se encarga de importar el board inicial del cual parte la simulacion
 
 
         //Atributos

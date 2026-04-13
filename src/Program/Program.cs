@@ -10,15 +10,6 @@ namespace Ucu.Poo.GameOfLife
         
         static void Main(string[] args)
         {
-            public void Juego(Board board, Board_Printer printer, MotorDeReglas motor)
-            {
-                while (true)
-                {
-                    printer.Print();
-                    Thread.Sleep(300);
-                    motor.Generacion(board);
-                }
-            }
             Console.WriteLine("Inicio del programa");
             
             //Crear el board importer

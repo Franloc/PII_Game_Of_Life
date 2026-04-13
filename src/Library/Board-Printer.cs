@@ -43,9 +43,7 @@ namespace Ucu.Poo.GameOfLife
                 }
             s.Append("\n");
             Console.WriteLine(s.ToString());
-    //=================================================
-    //Invocar método para calcular siguiente generación
-    //=================================================
+            MotorDeReglas.Generacion(gameBoard);
             Thread.Sleep(300);
             }
         }

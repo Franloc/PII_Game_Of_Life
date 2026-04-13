@@ -17,10 +17,10 @@ namespace Ucu.Poo.GameOfLife
         }
 
         //Dimensiones del board
-        private int bWitdh;
+        private int bWidth;
         public int BWidth
         {
-            get {return this.BWidth;} set {this.bWitdh = value;}
+            get {return this.bWidth;} set {this.bWidth = value;}
         }
         private int bHeigth;
         public int BHeigth

@@ -26,15 +26,15 @@ namespace Ucu.Poo.GameOfLife
             //Crea el motor
             MotorDeReglas motor = new MotorDeReglas();
 
-            Juego();
+            Juego(tablero, printer, motor);
         }
-        public void Juego(Board tablero, Board_Printer printer, MotorDeReglas motor)
+        public void Juego(Board board, Board_Printer printer, MotorDeReglas motor)
         {
             while (true)
             {
                 printer.Print();
                 Thread.Sleep(300);
-                motor.Generacion(tablero);
+                motor.Generacion(board);
             }
         }
     }

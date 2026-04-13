@@ -35,7 +35,7 @@ namespace Ucu.Poo.GameOfLife
             gameBoard = importedBoard;
             BWidth = importedBoard.GetLength(0);
             BHeight = importedBoard.GetLength(1);
-
+            cells = new List<Cell>();
 
             //Anade una celula //No estoy seguro si es necesario tener una lista de celulas, no me acuerdo que
             //habia que hacer con las celulas.

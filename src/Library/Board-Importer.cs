@@ -48,7 +48,7 @@ namespace Ucu.Poo.GameOfLife
         //Constructor
         public Board_Importer()
         {
-            Url = "assets/board.txt";
+            Url = "../../../../../assets/board.txt";
             content = File.ReadAllText(Url);
             contentLines = content.Split('\n');
             board = new bool[contentLines.Length, contentLines[0].Length];

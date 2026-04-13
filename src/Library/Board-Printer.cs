@@ -41,6 +41,9 @@ namespace Ucu.Poo.GameOfLife
             }
             s.Append("\n");
             Console.WriteLine(s.ToString());
+
+            //Delay
+            Thread.Sleep(300);
         }
         public Board_Printer(bool[,] b,int width, int height)
         {

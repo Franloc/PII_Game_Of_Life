@@ -5,8 +5,11 @@ namespace Ucu.Poo.GameOfLife
 {
     public class Board_Importer
     {
+        //Esta clase se encarga de importar el boardo inicial del cual parte la simulacion
+
+
         //Atributos
-        private string url;
+        private string url; //url para acceder al asset
         public string Url
         {
             get { return this.url;} set { this.url = value;}
@@ -21,13 +24,14 @@ namespace Ucu.Poo.GameOfLife
         {
             get {return this.contentLines;} set {this.contentLines = value;}
         }
-        private bool[,] board;
+        private bool[,] board; //Representa el tablero
         public bool[,] Board
         {
             get {return this.board;} set {this.board = value;}
         }
         
         //Metodos
+
         //Carga el archivo del tablero
         public bool[,] Cargar_archivo()
         {
@@ -43,6 +47,7 @@ namespace Ucu.Poo.GameOfLife
             }
             return board;
         }
+
         //Constructor
         public Board_Importer()
         {

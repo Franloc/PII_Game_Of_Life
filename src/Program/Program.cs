@@ -5,6 +5,7 @@ namespace Ucu.Poo.GameOfLife
 {
     class Program
     {
+        // Clase Program donde se corre el juego
         
         static void Main(string[] args)
         {
@@ -32,10 +33,9 @@ namespace Ucu.Poo.GameOfLife
             //Loop de generacion
             while (true)
             {
-                Console.Clear();
-                printer.Print();
-                tablero.GameBoard = motor.Generacion(tablero);
-                printer.B = tablero.GameBoard;
+                printer.Print(); //Imprime el tablero
+                tablero.GameBoard = motor.Generacion(tablero); //Actualiza el board a la nueva generacion
+                printer.B = tablero.GameBoard; //Actualiza el board que debe imprimir el printer
             }
         }
     }

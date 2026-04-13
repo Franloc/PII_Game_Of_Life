@@ -19,6 +19,7 @@ namespace Ucu.Poo.GameOfLife
         {
             get {return this.bHeight;} set {this.bHeight = value;}
         }
+        
         //Constructor
         public Board(bool[,] importedBoard)
         {

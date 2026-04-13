@@ -53,6 +53,9 @@ namespace Ucu.Poo.GameOfLife
                     }
                 }
             }
+
+
+            printer.print(cloneboard);
         } 
     } 
 }

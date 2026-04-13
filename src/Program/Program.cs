@@ -25,6 +25,8 @@ namespace Ucu.Poo.GameOfLife
             
             //Crea el motor
             MotorDeReglas motor = new MotorDeReglas();
+
+            Juego();
         }
         public void Juego(Board tablero, Board_Printer printer, MotorDeReglas motor)
         {

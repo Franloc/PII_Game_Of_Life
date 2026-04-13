@@ -54,5 +54,15 @@ namespace Ucu.Poo.GameOfLife
                 }
             }
         }
+        public void Juego(Board board, Board_Printer printer, MotorDeReglas motor)
+        {
+            while (true)
+            {
+                printer.Print();
+                Thread.Sleep(300);
+                motor.Generacion(board);
+            }
+        }
+    
     } 
 }

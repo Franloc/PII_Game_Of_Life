@@ -14,15 +14,12 @@ namespace Ucu.Poo.GameOfLife
             
             //Crear el board importer
             Board_Importer importador = new Board_Importer();
-
-            //Obtener el tablero inicial
-            bool[,] tablero_inicial = importador.Cargar_archivo();
             
             //Crea el tablero
-            Board tablero = new Board(tablero_inicial);
+            Board tablero = new Board(importador.Cargar_archivo());
             
             //Crea el printer
-            Board_Printer printer = new Board_Printer(tablero_inicial,tablero.BWidth,tablero.BHeight);
+            Board_Printer printer = new Board_Printer(tablero.GameBoard,tablero.BWidth,tablero.BHeight);
             
             //Crea el motor
             MotorDeReglas motor = new MotorDeReglas();
@@ -30,7 +27,8 @@ namespace Ucu.Poo.GameOfLife
             //nfsjnwkj
             while (true)
             {
-                motor.Generacion(tablero);
+                printer.Print();
+                tablero.GameBoard = motor.Generacion(tablero);
             }
         }
     }

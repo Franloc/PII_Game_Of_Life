@@ -26,6 +26,7 @@ namespace Ucu.Poo.GameOfLife
         {
             get {return this.board;} set {this.board = value;}
         }
+        
         //Metodos
         //Carga el archivo del tablero
         public bool[,] Cargar_archivo()

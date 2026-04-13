@@ -1,16 +1,9 @@
-using System.Collections.Generic;
-
 namespace Ucu.Poo.GameOfLife
 {
     public class Board
     {
         //Atributos
-        private List<Cell> cells = new List<Cell>();
-        public List<Cell> Cells
-        {
-            get { return this.cells;} set { this.cells = value;}
-        }
-        private bool[,] gameBoard;
+        private bool[,] gameBoard; //Representa el tablero
         public bool[,] GameBoard
         {
             get {return this.gameBoard;} set {this.gameBoard = value;}
@@ -27,33 +20,13 @@ namespace Ucu.Poo.GameOfLife
         {
             get {return this.bHeight;} set {this.bHeight = value;}
         }
-
-
+        
         //Constructor
         public Board(bool[,] importedBoard)
         {
             gameBoard = importedBoard;
-            BWidth = importedBoard.GetLength(0);
-            BHeight = importedBoard.GetLength(1);
-
-
-            //Anade una celula //No estoy seguro si es necesario tener una lista de celulas, no me acuerdo que
-            //habia que hacer con las celulas.
-            for (int y = 0; y<BHeight;y++)
-            {
-                for (int x = 0; x<BWidth; x++)
-                {
-                    if(importedBoard[x,y])
-                    {
-                        this.cells.Add(new Cell(true));
-                    }
-                    else
-                    {
-                        ;
-                    }
-                }
-                
-            }
+            BWidth = importedBoard.GetLength(1);
+            BHeight = importedBoard.GetLength(0);
         }
 
     }

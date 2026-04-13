@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace Ucu.Poo.GameOfLife
 {
@@ -7,7 +8,10 @@ namespace Ucu.Poo.GameOfLife
         
         static void Main(string[] args)
         {
+            //Inicio
+            Console.Clear();
             Console.WriteLine("Inicio del programa");
+
             
             //Crear el board importer
             Board_Importer importador = new Board_Importer();
@@ -21,11 +25,17 @@ namespace Ucu.Poo.GameOfLife
             //Crea el motor
             MotorDeReglas motor = new MotorDeReglas();
 
-            //nfsjnwkj
+
+            //Delay antes de empezar a simular
+            Thread.Sleep(2000);
+            
+            //Loop de generacion
             while (true)
             {
+                Console.Clear();
                 printer.Print();
                 tablero.GameBoard = motor.Generacion(tablero);
+                printer.B = tablero.GameBoard;
             }
         }
     }

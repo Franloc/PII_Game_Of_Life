@@ -6,6 +6,7 @@ namespace Ucu.Poo.GameOfLife
 {
     public class Board_Printer
     {
+        //Atributos
         private bool[,] b; //variable que representa el tablero
         public bool [,] B
         {
@@ -21,6 +22,9 @@ namespace Ucu.Poo.GameOfLife
         {
             get {return this.height;} set {this.height=value;}
         }
+
+        //Metodos
+        //Mostrar tablero
         public void Print()
         {
             Console.Clear();
@@ -29,22 +33,24 @@ namespace Ucu.Poo.GameOfLife
             {
                 for (int x = 0; x<width; x++)
                 {
-                    if(b[x,y])
+                    if(b[y,x])
                     {
                         s.Append("|X|");
                     }
                     else
                     {
-                        s.Append("___");
+                        s.Append("---");
                     }
                 }
+                s.Append("\n");
             }
-            s.Append("\n");
             Console.WriteLine(s.ToString());
 
             //Delay
-            Thread.Sleep(300);
+            Thread.Sleep(500);
         }
+
+        //Constructor
         public Board_Printer(bool[,] b,int width, int height)
         {
             this.B=b;
